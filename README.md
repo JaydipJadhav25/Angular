@@ -1,59 +1,52 @@
-# HelloAngular
+# Angular Project Documentation
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
-## Development server
+## 🚀 Angular CLI (`ng`) Overview
+The Angular CLI is a command-line interface tool used to initialize, develop, scaffold, and maintain Angular applications directly from a command shell.
 
-To start a local development server, run:
+All CLI commands begin with `ng`.
 
-```bash
-ng serve
-```
+## 🛠️ The `generate` Command (`g`)
+The `ng generate` (or `ng g`) command uses schematics to generate or modify files based on a blueprint.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**Syntax:** `ng g <schematic> <name> [options]`
 
-## Code scaffolding
+### Commonly Used `generate` Schematics
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Schematic | Alias | Description | Example |
+| :--- | :--- | :--- | :--- |
+| **component** | `c` | Creates a new component | `ng g c components/user` |
+| **module** | `m` | Creates a new module | `ng g m modules/admin` |
+| **service** | `s` | Creates a new service | `ng g s services/data` |
+| **directive** | `d` | Creates a new directive | `ng g d directives/highlight` |
+| **pipe** | `p` | Creates a new pipe | `ng g p pipes/format` |
+| **interface** | `i` | Creates a new interface | `ng g i models/user` |
+| **class** | `cl` | Creates a new class | `ng g cl models/user` |
+| **guard** | `g` | Creates a new route guard | `ng g g guards/auth` |
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📋 Essential Angular CLI Commands
 
-```bash
-ng generate --help
-```
+### Development Server
+*   `ng serve` (or `ng s`): Builds and serves the application locally, rebuilding on file changes.
+*   `ng serve --open` (or `-o`): Serves the app and opens it in the default browser.
 
-## Building
+### Building & Testing
+*   `ng build` (or `ng b`): Compiles the application into an output directory (`dist/` by default).
+*   `ng test` (or `ng t`): Runs unit tests via Karma.
+*   `ng lint`: Runs linting tools on the code.
 
-To build the project run:
+### Setup & Maintenance
+*   `ng new <project-name>`: Creates a new Angular workspace.
+*   `ng add <library>`: Adds support for an external library (e.g., `@angular/material`).
+*   `ng update`: Updates your application and its dependencies.
+*   `ng version` (or `ng v`): Outputs Angular CLI version.
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## ⚙️ Useful Flags
+*   `--dry-run` (or `-d`): Reports what files would be created without actually writing them to disk.
+*   `--skip-tests`: Skips generating spec files (`.spec.ts`).
+*   `--flat`: Puts files in the current folder instead of creating a subfolder.
