@@ -1,20 +1,19 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Navbar } from './navbar/navbar';
+import { Home } from "./home/home";
+import { Footer } from "./footer/footer";
+// import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Navbar, Home, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('hello_angular');
   name = "jaydip";
-  counter = 0;
-  isAdmin=true;
-  count = 200;
-  price = 120.300;
-  isLogin = false;
+ 
 
   title2 = signal("angular interpolation!");
 

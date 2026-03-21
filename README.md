@@ -1,52 +1,47 @@
-# Angular Project Documentation
+# Angular Components Guide
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
-
-## 🚀 Angular CLI (`ng`) Overview
-The Angular CLI is a command-line interface tool used to initialize, develop, scaffold, and maintain Angular applications directly from a command shell.
-
-All CLI commands begin with `ng`.
-
-## 🛠️ The `generate` Command (`g`)
-The `ng generate` (or `ng g`) command uses schematics to generate or modify files based on a blueprint.
-
-**Syntax:** `ng g <schematic> <name> [options]`
-
-### Commonly Used `generate` Schematics
-
-| Schematic | Alias | Description | Example |
-| :--- | :--- | :--- | :--- |
-| **component** | `c` | Creates a new component | `ng g c components/user` |
-| **module** | `m` | Creates a new module | `ng g m modules/admin` |
-| **service** | `s` | Creates a new service | `ng g s services/data` |
-| **directive** | `d` | Creates a new directive | `ng g d directives/highlight` |
-| **pipe** | `p` | Creates a new pipe | `ng g p pipes/format` |
-| **interface** | `i` | Creates a new interface | `ng g i models/user` |
-| **class** | `cl` | Creates a new class | `ng g cl models/user` |
-| **guard** | `g` | Creates a new route guard | `ng g g guards/auth` |
+This document explains the core components that make up an **Angular** application. In Angular, a component is the most basic UI building block.
 
 ---
 
-## 📋 Essential Angular CLI Commands
+## 🏗️ Anatomy of a Component
+Every Angular component consists of four distinct files that work together:
 
-### Development Server
-*   `ng serve` (or `ng s`): Builds and serves the application locally, rebuilding on file changes.
-*   `ng serve --open` (or `-o`): Serves the app and opens it in the default browser.
+### 1. Component Class (`.ts`)
+The **Logic Layer**. It handles data and user interactions.
+*   **Decorator:** Uses `@Component()` to define metadata.
+*   **Selector:** The custom HTML tag (e.g., `<app-root>`).
+*   **Logic:** Contains properties (data) and methods (functions).
 
-### Building & Testing
-*   `ng build` (or `ng b`): Compiles the application into an output directory (`dist/` by default).
-*   `ng test` (or `ng t`): Runs unit tests via Karma.
-*   `ng lint`: Runs linting tools on the code.
+### 2. HTML Template (`.html`)
+The **View Layer**. Defines the structure of the UI.
+*   **Interpolation:** `{{ value }}` displays data from the class.
+*   **Directives:** `*ngIf` and `*ngFor` add logic to the layout.
 
-### Setup & Maintenance
-*   `ng new <project-name>`: Creates a new Angular workspace.
-*   `ng add <library>`: Adds support for an external library (e.g., `@angular/material`).
-*   `ng update`: Updates your application and its dependencies.
-*   `ng version` (or `ng v`): Outputs Angular CLI version.
+### 3. Styles (`.css` / `.scss`)
+The **Design Layer**.
+*   **Encapsulation:** Styles are "scoped," meaning they only affect this specific component and won't leak to others.
+
+### 4. Unit Test (`.spec.ts`)
+The **Quality Layer**.
+*   Used for automated testing to ensure the component behaves correctly.
 
 ---
 
-## ⚙️ Useful Flags
-*   `--dry-run` (or `-d`): Reports what files would be created without actually writing them to disk.
-*   `--skip-tests`: Skips generating spec files (`.spec.ts`).
-*   `--flat`: Puts files in the current folder instead of creating a subfolder.
+## 🔄 Component Lifecycle Hooks
+Angular provides hooks to tap into key moments of a component's life:
+*   **`ngOnInit()`**: Run once after the component is initialized (best for API calls).
+*   **`ngOnChanges()`**: Run when input properties change.
+*   **`ngOnDestroy()`**: Run right before the component is removed (best for cleanup).
+
+---
+
+## 🛠️ CLI Commands
+Generate a new component using the Angular CLI:
+
+```bash
+# Full command
+ng generate component component-name
+
+# Shortcut
+ng g c component-name
