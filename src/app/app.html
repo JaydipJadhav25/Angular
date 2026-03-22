@@ -2,23 +2,5 @@
 <h1>{{name}}</h1>
 
 
-<h1>Proprty binding</h1>
-
-
-<img [src]="homeImage" alt="homeImage">
-
-
-<div [class.active] = "active">
-  class apply from proprt binding
-</div>
-
-
-<input type="text" readonly [value]="username">
-
-<div  [style.background-color]="bgColor">binding style </div>
-
-
-
-<p [innerText]='" count = "+count()'></p>
-<p>normal count : </p>
-<p [innerText]='" count = "+count2'></p>
+<h1>Event Binding</h1>
+<app-events></app-events>
