@@ -18,4 +18,12 @@ export class App {
   count = signal(0);
   count2 = 0;
 
+  firstFun(){
+      this.secondFun();
+  }
+
+  secondFun(){
+    alert("this is second function:")
+  }
+
 }
