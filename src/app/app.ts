@@ -26,4 +26,28 @@ export class App {
     alert("this is second function:")
   }
 
+
+  val : string = "jaydip";
+  age : number = 20;
+  isValid : boolean = false;
+   date :any = 34;
+  data : unknown = 30;
+  email : undefined | number | string = undefined; //multiple type => union type
+
+  //type of function paramenter
+  takeInput(num : number , num2 : number){
+
+  };
+
+  takeInput2({num} : {num : number}){
+     console.log(num);
+  };
+
+
+
+
+
+
+
+
 }
