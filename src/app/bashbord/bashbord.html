@@ -1,0 +1,13 @@
+<p>bashbord works!</p>
+
+<button (click)="buttonClick()">Click!</button>
+
+
+<label for="">Input : </label>
+<p>{{input}}</p>
+<input type="text" (input)="inputEffect($event.target.value)">
+
+<input type="text" (keyup)="onkeyup($event)" (blur)="blueEffect()" part="" placeholder="keyup event" name="" id="">    
+<div (mouseover)="hoverEffect()"  class="mous-hover">
+    
+</div>

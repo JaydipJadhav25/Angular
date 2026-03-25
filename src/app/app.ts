@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Bashbord } from "./bashbord/bashbord";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Bashbord],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -43,11 +44,6 @@ export class App {
      console.log(num);
   };
 
-
-
-
-
-
-
+   
 
 }
