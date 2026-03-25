@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// import { RouterOutlet } from '@angular/router';
 import { Bashbord } from "./bashbord/bashbord";
+import { Counter } from './Counter/counter';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Bashbord],
+  imports: [ Bashbord , Counter],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

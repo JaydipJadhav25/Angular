@@ -1,0 +1,29 @@
+
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.main{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 60px;
+    height: 60px;
+    margin: 30px;
+    font-size: larger;
+    color: black;
+    border-radius: 10px;
+}
+
+button:active{
+     background-color: blue;
+     width: 62px;
+}
