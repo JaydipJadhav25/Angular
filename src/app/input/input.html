@@ -1,0 +1,17 @@
+<p>input works!</p>
+
+<label for="">Name : </label>
+<h1>{{name}}</h1>
+
+<input type="text" (input)="setInput($event.target.value)">
+<br>
+<label for="">Email : </label>
+
+<h1>{{email}}</h1>
+<input type="text" (input) ="email=$event.target.value">
+
+
+<h2>{{city}}</h2>
+<input type="text" #userinput>
+<!-- <input type="text" (input)="getCity($event.target.value)"> -->
+<button (click)="getCity(userinput.value)">get city</button>
