@@ -1,53 +1,7 @@
-<h1> I Am Jaydip</h1>
-<h1>{{name}}</h1>
+<div>
+
+  <h1>Conditions</h1>
+  <app-conditions></app-conditions>
 
 
-<h1>Proprty binding</h1>
-
-
-<img [src]="homeImage" alt="homeImage">
-
-
-<div [class.active] = "active">
-  class apply from proprt binding
 </div>
-
-
-<input type="text" readonly [value]="username">
-
-<div  [style.background-color]="bgColor">binding style </div>
-
-
-
-<p [innerText]='" count = "+count()'></p>
-<p>normal count : </p>
-<p [innerText]='" count = "+count2'></p>
-
-
-<button   (click)="firstFun()">callFuntion</button>
-
-
-
-<button (click)="takeInput2({num : 20})"></button>
-
-
-
-
-<h1>Click, Input, Mouse, Focus & Blur Events</h1>
-
-<app-bashbord></app-bashbord>
-
-
-
-
-<h1>Get and set Input filed value in angular</h1>
-<app-input></app-input>
-
-<style>
-.heading{
-  background-color: chocolate;
-}
-
-</style>
-
-<h1 class="heading">inline css</h1>

@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Bashbord } from "./bashbord/bashbord";
 import { Input } from './input/input';
+import { Conditions } from './conditions/conditions';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Bashbord , Input],
+  imports: [RouterOutlet ,Conditions],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

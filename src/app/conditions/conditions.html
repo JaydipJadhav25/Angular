@@ -1,0 +1,67 @@
+<p>conditions works!</p>
+
+<h1>If-ELse</h1>
+
+@if(isYes){
+    <div style="width: 300px; height: 300px; background-color: aqua; transition-duration: 3s;">
+        <h1>Opne Door</h1>
+    </div>
+}@else{
+  <h1>Close Door </h1>  
+}
+
+
+<button (click)="toggalYes()">{{isYes ? "close" : "open"}}</button>
+
+
+@if(number%2==0){
+    <h1 style="color: green;">{{number}}</h1>
+}@else {
+    <h1 style="color: red;">{{number}}</h1>
+}
+
+<button (click)="incress()">+</button>
+
+
+
+
+<h1>ELSE_IF</h1>
+
+@if (order==="pending") {
+     
+    <h1>pending..</h1>
+
+}@else if (order === "conform") {
+    <h1>conform!</h1>
+}@else if (order==="Done") {
+    <h1>done</h1>
+}
+
+<button (click)="order='conform'">conform</button>
+<button (click)="order='Done'">done</button>
+
+<h1>Switch Case</h1>
+
+
+<button (click)="tab='home'">Home</button>
+<button (click)="tab='about'">about</button>
+<button (click)="tab='contact'">contact</button>
+
+
+@switch (tab) {
+    @case ('home') {
+        <h1>Home</h1>
+    }
+    @case ('about') {
+        <h1>About</h1>
+    }
+    @case ('contact') {
+        <h1>Contact</h1>
+    }
+    @default {
+        <h1>Not Found</h1>
+    }
+}
+
+
+
