@@ -2,6 +2,25 @@
 
   <h1>Conditions</h1>
   <app-conditions></app-conditions>
+ <hr>
+  <h1>Foor Loop</h1>
+  @for (item of  chars; track $index) {
+     <p >{{$index}}.{{item}}</p>
+  }
 
+
+  <!-- //track in unique -->
+  @for (item of users; track $index) {
+      <div>
+         <p>{{item.name}}</p>
+        <p>{{item.age}}</p>
+      </div>
+  }
+
+
+  @for (item of items; track $index  ; let i = $index) {
+    <h1>{{item}}</h1>
+    <button (click)="removeItems(i)">delete</button>
+  }
 
 </div>

@@ -46,6 +46,26 @@ export class App {
      console.log(num);
   };
 
+
+
+  chars = ["A" , "B" ,"C" , "D" ,"E"];
+  users = [
+    {name : "jay" , age: 30},
+    {name : "deep" , age: 40},
+  ]
+
+  items = ['apple' , 'bannan' , 'orange'];
+
+  removeItems(index : number){
+       let  temp = [];
+         
+       temp = this.items.filter((ele)=>{
+        return ele != this.items[index];
+       })
+       this.items = temp;
+      
+  }
+
    
 
 }
