@@ -23,4 +23,41 @@
     <button (click)="removeItems(i)">delete</button>
   }
 
+
+
+
 </div>
+
+
+<h1>Contextual Variables</h1>
+
+@for (item of items; track $index; let i =$index; let c = $count) {
+   <p>{{$index}} => {{item}}</p>
+  
+}
+
+
+@for (item of items; track $index; let i =$index; let c = $count) {
+   @if($first){
+    <p>first : {{item}}</p>
+   }@else {
+    <p [style.color]="$even ? 'red' : 'green'">
+      {{item}}
+    </p>
+   }
+  
+}
+
+@for (num of items; track $index) {
+  <div>
+    <span>{{num}}</span>
+    | <span>index: {{$index}}</span>
+    | <span>odd: {{$odd}}</span>
+    | <span>even: {{$even}}</span>
+    | <span>first: {{$first}}</span>
+    | <span>last: {{$last}}</span>
+  </div>
+}
+
+
+

@@ -55,6 +55,7 @@ export class App {
   ]
 
   items = ['apple' , 'bannan' , 'orange'];
+  numbes = [1 ,2 ,3 ,4, 5, 6,7];
 
   removeItems(index : number){
        let  temp = [];
