@@ -1,17 +1,24 @@
 <h1>signals</h1>
 
-<p>val : {{val}}</p>
-<p>count : {{count()}}</p>
-
-<button (click)="count.set(50)">chnage count</button>
-<button (click)="count.update(c => c+1)">chnage count</button>
-
-<button (click)="val=30">update val</button>
+<label for="">User</label>
+<!-- <p>{{user().name}} . {{user().age}}</p> -->
 
 
+<p>{{rollNo()}}</p>
+<button (click)="directSet()">direct</button>
 
-<h1>{{count()}}</h1>
 
-<button (click)="increment()">+</button>
-<button (click)="decrement()">-</button>
-<button (click)="reset()">0</button>
+
+<hr>
+<input type="text" #rollNoVal  placeholder="rollNo">
+<button (click)="getVal(rollNoVal.value)">add</button>
+
+
+<br>
+
+
+
+
+
+
+
