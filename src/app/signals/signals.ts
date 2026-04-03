@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { single } from 'rxjs';
 
 
@@ -39,6 +39,31 @@ export class Signals {
    getVal(val : string){
      this.rollNo.update(num => [...num , Number(val)]);
    }
+
+   //finde total depending on chnage
+   total = computed<number>(()=> this.rollNo().length);
+
+
+   doubleCount = computed<number>(() => this.count() * 2);
+   tipleCount = computed<number>(() => this.count() * 3);
+
+
+
+   incress(){
+    this.count.set(this.count()+1);
+   }
+
+   first = signal<string>("jaydip");
+   last = signal<string>("jadhav");
+
+   fullName = computed<string>(()=>`${this.first()}  ${this.last()}`);
+
+
+
+
+
+
+
 
 
 
