@@ -1,0 +1,30 @@
+<h1>Pipes Works</h1>
+
+
+
+<h2>{{name | uppercase}}</h2>
+<h2>multiple : {{ name | uppercase | slice:0:5 }}</h2>
+<h2>{{surname | lowercase}}</h2>
+<h2>{{surname | uppercase}}</h2>
+<h2>{{surname}}</h2>
+
+
+<h2>today : {{today | date:"full"}}</h2>
+<h2>today : {{today | date:"short"}}</h2>
+<h2>today : {{today | date:"dd/MM/yyy"}}</h2>
+
+
+<p>price</p>
+<h2>INR :{{price | currency:"INR"}}</h2>
+<h2>USD :{{price | currency:"USD"}}</h2>
+<h2>Custom :{{price | currency:"INR" : 'symbol' : '1.0-0'}}</h2>
+
+
+<p>persent:</p>
+<h2>{{val | percent}}</h2>
+
+<p>json</p>
+<h2>{{user | json}}</h2>
+
+
+
