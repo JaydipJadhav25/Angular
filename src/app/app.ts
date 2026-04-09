@@ -6,15 +6,21 @@ import { Signals } from './signals/signals';
 import { Effets } from './effets/effets';
 import { Pipes } from './pipes/pipes';
 import { ShortNamePipePipe } from './pipes/short-name-pipe-pipe';
+import { ConvertPipePipe } from './pipes/convert-pipe-pipe';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [Pipes  , ShortNamePipePipe],
+  imports: [Pipes  , ShortNamePipePipe , ConvertPipePipe , CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   fullname = "jaydip jadhav";
+
+
+  usd = 10;
+  usdToInr = 85;
  
    
 
