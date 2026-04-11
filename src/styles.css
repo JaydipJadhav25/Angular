@@ -3,3 +3,13 @@ body{
     /* background-color: blueviolet; */
     text-align: center;
 }
+
+p{
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+h2{
+    color: orangered;
+}

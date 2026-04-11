@@ -1,0 +1,15 @@
+
+<h2>old Way : </h2>
+<p>Name :{{name}}</p>
+<input type="text" [(ngModel)]="name" placeholder="enter your name">
+
+<h2>New Way:</h2>
+<p>Username : {{username()}}</p>
+
+<input type="text" [value]="username()" (input)="username.set($event.target.value)">
+
+<p>user</p>
+<p>{{user().name}} :  {{user().age}}</p>
+
+<input type="text" name="name" (input)="updateUser($event.target.name , $event.target.value)" placeholder="enter name">
+<input type="number" name="age" (input)="updateUser($event.target.name , $event.target.value)" placeholder="enter age">

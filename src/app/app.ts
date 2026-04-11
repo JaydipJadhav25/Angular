@@ -8,19 +8,16 @@ import { Pipes } from './pipes/pipes';
 import { ShortNamePipePipe } from './pipes/short-name-pipe-pipe';
 import { ConvertPipePipe } from './pipes/convert-pipe-pipe';
 import { CommonModule } from '@angular/common';
+import { Twowaybinding } from './twowaybinding/twowaybinding';
 
 @Component({
   selector: 'app-root',
-  imports: [Pipes  , ShortNamePipePipe , ConvertPipePipe , CommonModule],
+  imports: [ Twowaybinding],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  fullname = "jaydip jadhav";
 
-
-  usd = 10;
-  usdToInr = 85;
  
    
 
