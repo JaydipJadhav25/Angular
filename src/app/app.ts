@@ -9,10 +9,11 @@ import { ShortNamePipePipe } from './pipes/short-name-pipe-pipe';
 import { ConvertPipePipe } from './pipes/convert-pipe-pipe';
 import { CommonModule } from '@angular/common';
 import { Twowaybinding } from './twowaybinding/twowaybinding';
+import { TodoApp } from './todo-app/todo-app';
 
 @Component({
   selector: 'app-root',
-  imports: [ Twowaybinding],
+  imports: [ TodoApp],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

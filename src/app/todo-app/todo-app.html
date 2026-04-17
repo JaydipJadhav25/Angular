@@ -1,0 +1,25 @@
+<h1>TODO APP</h1>
+<hr />
+<br />
+
+  <input type="text" #task placeholder="add task"  required/>
+  <button (click)="add(task.value)">ADD</button>
+
+
+<br />
+<hr />
+<br />
+<h2>list of Todos:</h2>
+<span>Total: {{todo().length}}</span>
+<div class="todos">
+   @for (item of todo(); track item.id) {
+
+  <div class="task"   (click)="compeleteTask(item.id)">
+      <p>{{item.id}}</p>
+      <p>{{item.task}}</p>
+      <p>{{item.isCompelet ? "Compeleted" : "Pending"}}</p>
+      <!-- <button (click)="compeleteTask(item.id)">Done</button> -->
+      <button (click)="deleteTask(item.id)">Delete</button>
+  </div>
+}
+</div>
