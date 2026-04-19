@@ -10,10 +10,11 @@ import { ConvertPipePipe } from './pipes/convert-pipe-pipe';
 import { CommonModule } from '@angular/common';
 import { Twowaybinding } from './twowaybinding/twowaybinding';
 import { TodoApp } from './todo-app/todo-app';
+import { Parent } from './parent/parent';
 
 @Component({
   selector: 'app-root',
-  imports: [ TodoApp],
+  imports: [Parent ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
