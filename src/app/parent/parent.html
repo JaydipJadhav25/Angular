@@ -1,3 +1,17 @@
 <p>parent works!</p>
 
-<app-child [name]='fullname' [age] ="age"></app-child>
+<h1>child to parent / old way</h1>
+
+
+<app-child (notify)="onMessages($event)"></app-child>
+
+
+<p>Message from child: {{message}}</p>
+
+
+<h1>child to parent / new way using signals</h1>
+
+
+<app-child #child></app-child>
+
+<p>message from child : {{child.message()}}</p>

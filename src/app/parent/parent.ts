@@ -8,6 +8,9 @@ import { Child } from '../child/child';
   styleUrl: './parent.css',
 })
 export class Parent {
-   fullname = "jaydip";
-   age = 23;
+  message = "";
+     
+  onMessages(msg : string){
+    this.message = msg;
+  } 
 }
