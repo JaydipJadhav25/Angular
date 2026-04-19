@@ -9,4 +9,5 @@ import { Child } from '../child/child';
 })
 export class Parent {
    fullname = "jaydip";
+   age = 23;
 }
