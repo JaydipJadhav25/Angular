@@ -12,15 +12,18 @@ import { Twowaybinding } from './twowaybinding/twowaybinding';
 import { TodoApp } from './todo-app/todo-app';
 import { Parent } from './parent/parent';
 import { Counterstore } from './core/store/counter';
+import { Userstore } from './core/store/user';
 
 @Component({
   selector: 'app-root',
-  imports: [Parent ],
+  imports: [ ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-constructor(public counterstor : Counterstore){}
+// constructor(public counterstor : Counterstore){}
+
+constructor(public userstore : Userstore){}
  
   
 
