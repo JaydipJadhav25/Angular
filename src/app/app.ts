@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { Twowaybinding } from './twowaybinding/twowaybinding';
 import { TodoApp } from './todo-app/todo-app';
 import { Parent } from './parent/parent';
+import { Counterstore } from './core/store/counter';
 
 @Component({
   selector: 'app-root',
@@ -19,8 +20,8 @@ import { Parent } from './parent/parent';
   styleUrl: './app.css'
 })
 export class App {
-
+constructor(public counterstor : Counterstore){}
  
-   
+  
 
 }
