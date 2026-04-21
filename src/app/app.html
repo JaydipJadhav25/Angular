@@ -1,15 +1,2 @@
-<h1>Centre store</h1>
+<app-form></app-form>
 
-@if (userstore.user()) {
-  <p>welcome {{ userstore.user()?.name }}</p>
-
-  <button (click)="userstore.logout()">logout</button>
-} @else {
-  <p>user is not login !</p>
-  <input type="text" name="" id="" #user />
-  <select name="" id="" #role>
-    <option value="user">user</option>
-    <option value="admin">admin</option>
-  </select>
-  <button (click)="userstore.login(user.value,  $any(role.value))">login admin</button>
-}

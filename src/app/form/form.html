@@ -1,0 +1,17 @@
+<p>form works!</p>
+
+
+<input type="text"
+[(ngModel)]="name"
+placeholder="enter your name"
+(ngModelChange)="name.set($event)"
+>
+
+<input type="text"
+[(ngModel)]="email"
+placeholder="enter your email"
+(ngModelChange)="email.set($event)"
+>
+
+<p>name : {{name()}}</p>
+<p>email : {{email()}}</p>
