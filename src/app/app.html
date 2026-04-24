@@ -1,5 +1,9 @@
-<h1>Template Form</h1>
-<app-form></app-form>
-<h1>Reactive Forms</h1>
-<app-form2></app-form2>
+<h1>Resuable Card</h1>
 
+<div class="box">
+  @for (item of data; track $index) {
+    <app-cards [id]="item.id" [title]="item.title" [disc]="item.description"> 
+      <p>this is index {{$index}}</p>
+    </app-cards>
+  }
+</div>

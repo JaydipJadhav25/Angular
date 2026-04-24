@@ -5,3 +5,8 @@ h1{
 .active{
     background-color: green;
 }
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+}

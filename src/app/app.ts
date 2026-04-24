@@ -15,13 +15,46 @@ import { Counterstore } from './core/store/counter';
 import { Userstore } from './core/store/user';
 import { Form } from './form/form';
 import { Form2 } from './form2/form2';
+import { Cards } from './cards/cards';
+
+const items = [
+  {
+    id: 1,
+    title: "Project Alpha",
+    description: "Initial planning phase for the new client website."
+  },
+  {
+    id: 2,
+    title: "Market Research",
+    description: "Analyzing competitor trends in the tech sector."
+  },
+  {
+    id: 3,
+    title: "API Integration",
+    description: "Connecting the frontend app to the main backend server."
+  },
+  {
+    id: 4,
+    title: "User Testing",
+    description: "Gathering feedback from beta users on mobile UI."
+  },
+  {
+    id: 5,
+    title: "Final Deployment",
+    description: "Deploying the product to the live production environment."
+  }
+];
+
+// Example of accessing the data
+console.log(items[0].title); // Outputs: "Project Alpha"
+
 
 @Component({
   selector: 'app-root',
-  imports: [ Form  , Form2],
+  imports: [Cards],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  
+  data = items;
 }
