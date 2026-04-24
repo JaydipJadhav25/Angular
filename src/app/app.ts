@@ -14,10 +14,11 @@ import { Parent } from './parent/parent';
 import { Counterstore } from './core/store/counter';
 import { Userstore } from './core/store/user';
 import { Form } from './form/form';
+import { Form2 } from './form2/form2';
 
 @Component({
   selector: 'app-root',
-  imports: [ Form ],
+  imports: [ Form  , Form2],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

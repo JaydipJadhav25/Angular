@@ -1,0 +1,12 @@
+
+<form [formGroup]="form">
+    <input formControlName="name" type="text" placeholder="name">
+    <input formControlName="email" type="text" placeholder="email">
+</form>
+
+<button (click)="submiteForm()">Send</button>
+<br>
+<br>
+
+<p>name : {{usersignal().name}}</p>
+<p>email : {{usersignal().email}}</p>
