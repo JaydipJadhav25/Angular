@@ -8,5 +8,12 @@ import { Component, input, output } from '@angular/core';
 })
 export class Button {
   lable = input<string>();
-  clickFunction = output<void>();
+  // clickFunction = output<void>();
+  clickFunction = output<string>();
+
+  onClick() {
+    alert(`this is button comp!`);
+    this.clickFunction.emit('this is button comp!');
+  }
+
 }

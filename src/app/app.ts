@@ -58,7 +58,9 @@ console.log(items[0].title); // Outputs: "Project Alpha"
 })
 export class App {
   data = items;
-  saveDate(){
-    alert("save data!")
+  message = "";
+  onSave(msg : string){
+    console.log(msg);
+    this.message = msg;
   }
 }
