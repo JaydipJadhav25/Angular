@@ -17,6 +17,7 @@ import { Form } from './form/form';
 import { Form2 } from './form2/form2';
 import { Cards } from './cards/cards';
 import { Button } from './button/button';
+import { ResuableForm } from './resuable-form/resuable-form';
 
 const items = [
   {
@@ -52,7 +53,7 @@ console.log(items[0].title); // Outputs: "Project Alpha"
 
 @Component({
   selector: 'app-root',
-  imports: [Cards ,Button],
+  imports: [Cards ,Button , ResuableForm],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -62,5 +63,11 @@ export class App {
   onSave(msg : string){
     console.log(msg);
     this.message = msg;
+  }
+
+
+  value = '';
+  onChnageInput(val : string){
+    this.value = val;
   }
 }

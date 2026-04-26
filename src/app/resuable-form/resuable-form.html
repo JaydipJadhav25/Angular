@@ -1,0 +1,7 @@
+<label [htmlFor]="lable()">{{ lable() }} : </label>
+<input 
+ [type]="type()"
+ [name]="lable()"
+[placeholder]="placeholder()"
+(input)="onInput($event.target.value)"
+>

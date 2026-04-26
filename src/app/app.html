@@ -16,5 +16,15 @@
 
 
 
+<h1>Resuable Form</h1>
+<p>Name : {{value}}</p>
+
+<app-resuable-form
+ [lable]="'name'"
+ [type]="'text'"
+ (valueChnage)="onChnageInput($event)"
+ ></app-resuable-form>
+
+
 
 
