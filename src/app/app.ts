@@ -16,6 +16,7 @@ import { Userstore } from './core/store/user';
 import { Form } from './form/form';
 import { Form2 } from './form2/form2';
 import { Cards } from './cards/cards';
+import { Button } from './button/button';
 
 const items = [
   {
@@ -51,10 +52,13 @@ console.log(items[0].title); // Outputs: "Project Alpha"
 
 @Component({
   selector: 'app-root',
-  imports: [Cards],
+  imports: [Cards ,Button],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   data = items;
+  saveDate(){
+    alert("save data!")
+  }
 }
