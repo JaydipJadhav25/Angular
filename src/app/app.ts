@@ -18,6 +18,7 @@ import { Form2 } from './form2/form2';
 import { Cards } from './cards/cards';
 import { Button } from './button/button';
 import { ResuableForm } from './resuable-form/resuable-form';
+import { RouterLink, RouterOutlet } from "@angular/router";
 
 const items = [
   {
@@ -53,7 +54,7 @@ console.log(items[0].title); // Outputs: "Project Alpha"
 
 @Component({
   selector: 'app-root',
-  imports: [Cards ,Button , ResuableForm],
+  imports: [Cards, Button, ResuableForm, RouterLink, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

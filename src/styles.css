@@ -17,3 +17,19 @@ h1{
 h2{
     color: orangered;
 }
+
+
+nav{
+    /* background-color: aqua; */
+    /* padding: 30px; */
+    display: flex;
+    justify-content: space-around;
+}
+
+
+a{
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
