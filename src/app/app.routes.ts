@@ -18,6 +18,8 @@ import { Routes } from "@angular/router";
 import { Settening } from "./settening/settening";
 import { Profile } from "./profile/profile";
 import { Dashbord } from "./dashbord/dashbord";
+import { Home } from "./home/home";
+import { Admin } from "./admin/admin";
 
 
 export const routes: Routes = [
@@ -29,6 +31,13 @@ export const routes: Routes = [
             { path: "setting", component: Settening },
         ]
     },
-    { path: '', redirectTo: '', pathMatch: 'full' }
+    {
+        path : "home" , component : Home
+    },
+    {
+        path : "admin" ,
+        loadComponent : () => import('./admin/admin').then( m => m.Admin)
+    }
+    
 
 ]
