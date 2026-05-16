@@ -20,6 +20,7 @@ import { Profile } from "./profile/profile";
 import { Dashbord } from "./dashbord/dashbord";
 import { Home } from "./home/home";
 import { Admin } from "./admin/admin";
+import { PageNotFound } from "./page-not-found/page-not-found";
 
 
 export const routes: Routes = [
@@ -37,6 +38,9 @@ export const routes: Routes = [
     {
         path : "admin" ,
         loadComponent : () => import('./admin/admin').then( m => m.Admin)
+    },
+    {
+        path : "**" , component : PageNotFound
     }
     
 
