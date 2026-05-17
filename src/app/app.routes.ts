@@ -21,6 +21,8 @@ import { Dashbord } from "./dashbord/dashbord";
 import { Home } from "./home/home";
 import { Admin } from "./admin/admin";
 import { PageNotFound } from "./page-not-found/page-not-found";
+import { authGuard } from "./auth-guard";
+import { Login } from "./login/login";
 
 
 export const routes: Routes = [
@@ -37,7 +39,11 @@ export const routes: Routes = [
     },
     {
         path : "admin" ,
-        loadComponent : () => import('./admin/admin').then( m => m.Admin)
+        loadComponent : () => import('./admin/admin').then( m => m.Admin),
+        canActivate : [authGuard]
+    },
+    {
+        path : "login" , component : Login
     },
     {
         path : "**" , component : PageNotFound
