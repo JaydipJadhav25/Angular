@@ -23,6 +23,9 @@ import { Admin } from "./admin/admin";
 import { PageNotFound } from "./page-not-found/page-not-found";
 import { authGuard } from "./auth-guard";
 import { Login } from "./login/login";
+import { canDeactivateGuard } from "./can-deactivete-guard";
+import { ImpForm } from "./imp-form/imp-form";
+import { App } from "./app";
 
 
 export const routes: Routes = [
@@ -30,17 +33,20 @@ export const routes: Routes = [
         path: "dashbord",
         component: Dashbord,
         children: [
-            { path: "profile", component: Profile },
+            { path: "profile", component: Profile},
             { path: "setting", component: Settening },
         ]
-    },
-    {
-        path : "home" , component : Home
     },
     {
         path : "admin" ,
         loadComponent : () => import('./admin/admin').then( m => m.Admin),
         canActivate : [authGuard]
+    },{
+     path : "form" , component : ImpForm , 
+     canDeactivate : [canDeactivateGuard]
+    },
+    {
+        path : "home" , component : Home  ,
     },
     {
         path : "login" , component : Login
