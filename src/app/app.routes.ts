@@ -26,6 +26,7 @@ import { Login } from "./login/login";
 import { canDeactivateGuard } from "./can-deactivete-guard";
 import { ImpForm } from "./imp-form/imp-form";
 import { App } from "./app";
+import { ProductComp } from "./product-comp/product-comp";
 
 
 export const routes: Routes = [
@@ -50,6 +51,9 @@ export const routes: Routes = [
     },
     {
         path : "login" , component : Login
+    },
+    {
+       path : "product/:id" , component : ProductComp
     },
     {
         path : "**" , component : PageNotFound
