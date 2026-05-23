@@ -20,6 +20,11 @@
 <ol>
   <li routerLink="/product/111">Product 111</li>
   <li routerLink="/product/222">Product 222</li>
+    
+  <!-- hardcoded pass query params -->
+
+  <li [routerLink]="['/products']" [queryParams]="{category : 'techology' , sort : 'mobiel' , tab : 'productsPage'}">Products</li>
+
 </ol>
 
 
