@@ -28,6 +28,7 @@ import { ImpForm } from "./imp-form/imp-form";
 import { App } from "./app";
 import { ProductComp } from "./product-comp/product-comp";
 import { Products } from "./products/products";
+import { Demopage } from "./demopage/demopage";
 
 
 export const routes: Routes = [
@@ -58,9 +59,10 @@ export const routes: Routes = [
     },{
         path : "products" , component : Products
     },
+     {
+        path : "demopage" , component : Demopage
+    },
     {
         path : "**" , component : PageNotFound
-    }
-    
-
+    },
 ]
